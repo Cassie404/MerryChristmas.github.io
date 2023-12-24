@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 750px;
+    perspective: 1200px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 600px;
+    transform-style: preserve-3d;
+}
+
+.card .card-bg {
+    position: absolute;
+}
+
+.card .card-bg img {
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card .title {
+    z-index: 3;
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease-out;
+}
+
+.card .title h2 {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 40px;
+    color: #FFF;
+}
+
+.card .title h3 {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 30px;
+    color: #EEE;
+    margin-top: 10px;
+}
+
+.card .images{
+    z-index: 2;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+
+.card .images .santa {
+    z-index: 2;
+    position: absolute;
+    width: 250px;
+    transition: all 0.3s ease-out;
+    bottom: 20px;
+    left: -30px;
+}
+
+.card .images .me {
+    z-index: 3;
+    position: absolute;
+    width: 300px;
+    transition: all 0.3s ease-out;
+    bottom:-313px;
+    left: -150px;
+}
+
+.card .images .t {
+    z-index: 4;
+    position: absolute;
+    width: 130px;
+    transition: all 0.3s ease-out;
+    right: 70px;
+    top: -200px;
+}
